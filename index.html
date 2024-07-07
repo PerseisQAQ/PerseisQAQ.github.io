@@ -1,396 +1,232 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Perseis's Blog - You've got glitter in my veins.</title><meta name="author" content="PerseisQAQ"><meta name="copyright" content="PerseisQAQ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Perseis&#39;s Blog">
+<meta property="og:url" content="https://perseisqaq.github.io/index.html">
+<meta property="og:site_name" content="Perseis&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tse1-mm.cn.bing.net/th/id/OIP-C._cqrR1y2w5HDuRCDxlr71QAAAA?pid=ImgDet&rs=1">
+<meta property="article:author" content="PerseisQAQ">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://tse1-mm.cn.bing.net/th/id/OIP-C._cqrR1y2w5HDuRCDxlr71QAAAA?pid=ImgDet&rs=1"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://perseisqaq.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Perseis\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-02-18 02:07:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/07/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-07T12:36:41.828Z" itemprop="datePublished">2024-07-07</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/07/hello-world/">Hello World</a>
-    </h1>
-  
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://tse1-mm.cn.bing.net/th/id/OIP-C._cqrR1y2w5HDuRCDxlr71QAAAA?pid=ImgDet&amp;rs=1" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/59bpc5e6.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Perseis's Blog</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Perseis's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第二次面试赛后总结">     <img class="post_bg" src="http://imgsrc.baidu.com/forum/pic/item/f52ff027cffc1e17f9d1e3964790f603728de9b7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HUT实验室第二次面试赛后总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第二次面试赛后总结">HUT实验室第二次面试赛后总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-19T13:48:23.000Z" title="发表于 2021-10-19 21:48:23">2021-10-19</time></span></div><div class="content">前言二面比一面简单了好多，但我还是没有AK呜呜呜
+我是废物
+正文T1 Yuuki的魔法禁书目录有趣的题面：
+Yuuki得到了一本名为index的魔法书，据说里面记载了十万三千种魔法，只要把整本书读懂就能自行学会所有魔法，这本书有n个章节，每个章节都被一个特定的前提章节列表封印住了（即要读懂该章节，必须先把所有前提章节读完才能读）
+可是Yuuki现在一个字也看不懂，他只能从头到尾一遍一遍的读，请你帮他算一算他要读几遍才能读懂这本书，又或者完全不可能读懂全部章节。
+Input
+有t (1&lt;=t&lt;=2e4)组测试样例
+每个测试样例的第一行是一个整数n（1&lt;=n&lt;=2e5)—-表示章节数目
+接下来的n行，每行以一个k（0&lt;=k&lt;=n-1)开始—-表示第i章前提章节的数目，再输入k个前提章节的编号
+Output
+对于每个测试样例，输出Yuuki最少要读几遍书才能读懂全书，如果不能读懂，输出-1
+原题链接：Problem - 1573C - Codeforces
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/07/hello-world/" data-id="clybk1g2b00015gv34dcx0aa6" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+思路：
+拓扑排序，还不太会，等会update
 
 
+T2 无比强大的nero有趣的题面：
+Yuuki ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第一次面试赛后总结">     <img class="post_bg" src="https://inews.gtimg.com/newsapp_bt/0/13510359203/1000" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HUT实验室第一次面试赛后总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第一次面试赛后总结">HUT实验室第一次面试赛后总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-19T12:24:23.000Z" title="发表于 2021-10-19 20:24:23">2021-10-19</time></span></div><div class="content">前言其实已经赛后很久很久很久很久了但是我突然想起来于是就来补一下赛后总结
+正文T1 A有趣的题面：
+jelllllllll和tzjjjjjjjj是好朋友，他们都很会打枪这里有 N个枪靶，下标从1到N。每进行一次，轮到的那个人至少打掉一个，最多能打掉K个下标连续的靶子每次都是从jelllllllll开始游戏，然后tzjjjjjjjjjjjjj，接着jelllllllll….依次进行，如果轮到谁打没有靶子了，另外一个人就获得胜利奥对了,jelllllllll的游戏名是”Adrien”,tzjjjjjjjj的游戏名是”Austin”.
+Input
+仅一行,两个整数 N, K (0 ≤ N ≤ 106, 1 ≤ K ≤ 106).
+Output
+打印获得胜利的人的游戏名（不带引号）
+原题链接：Dashboard - 2018-2019 ACM-ICPC, Asia Nanjing Regional Contest - Codeforces
 
-  
-    <article id="post-Git学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/07/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2024-07-07T04:36:36.000Z" itemprop="datePublished">2024-07-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/07/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Git学习笔记</a>
-    </h1>
-  
+思路：
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>本学习笔记基于b站黑马程序员Git教程<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1MU4y1Y7h5/">https://www.bilibili.com/video/BV1MU4y1Y7h5/</a></p>
-<h2 id="1-Git下载与安装"><a href="#1-Git下载与安装" class="headerlink" title="1 Git下载与安装"></a>1 Git下载与安装</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a> 在这里下载安装</p>
-<h2 id="2-Git配置"><a href="#2-Git配置" class="headerlink" title="2 Git配置"></a>2 Git配置</h2><h3 id="2-1-基本配置"><a href="#2-1-基本配置" class="headerlink" title="2.1 基本配置"></a>2.1 基本配置</h3><h4 id="2-1-1-设置用户信息"><a href="#2-1-1-设置用户信息" class="headerlink" title="2.1.1 设置用户信息"></a>2.1.1 设置用户信息</h4><ol>
-<li>设置用户名 <code>git config --global user.name &quot;yourname&quot;</code><br>双引号内为用户名</li>
-<li>设置邮箱 <code>git config --global user.email &quot;youremail&quot;</code><br>双引号内为邮箱</li>
-</ol>
-<h4 id="2-1-2-为常用命令配置别名"><a href="#2-1-2-为常用命令配置别名" class="headerlink" title="2.1.2 为常用命令配置别名"></a>2.1.2 为常用命令配置别名</h4><ol>
-<li>在用户目录下，创建 .bashrc 文件<br>可以打开GitBash 执行 <code>touch ~/.bashrc</code></li>
-<li>在 .bashrc 中输入:</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看git提交日志</span></span><br><span class="line"><span class="built_in">alias</span> git-log=<span class="string">&#x27;git log --pretty=oneline --all --graph --abbrev-commit&#x27;</span></span><br><span class="line"><span class="comment"># 输出当前目录所有文件与基本信息</span></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">&#x27;ls -al&#x27;</span></span><br></pre></td></tr></table></figure>
+当k=0时，Adrien永远打不到最后一个靶子，先手必输
+当k=1时，获胜与枪靶的奇偶有关，奇数则Adrien胜，偶数则Austin胜
+当k!= ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/22/2%E7%9A%84n%E6%AC%A1%E6%96%B9%E6%9F%A5%E8%A1%A8/" title="2的n次方查表">     <img class="post_bg" src="https://tse1-mm.cn.bing.net/th/id/R-C.8c439522adbaee8344b4b1466bddd527?rik=gEz6AtPJjR06EQ&amp;riu=http%3a%2f%2fi0.hdslb.com%2fbfs%2farchive%2f00d9450e0f78eead92ce09152d7b0d21490c3540.jpg&amp;ehk=A2Y1v8uvDX%2bpUKSKVvBF4jVG9yWJucoBjs3NUSatUA0%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2的n次方查表"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/22/2%E7%9A%84n%E6%AC%A1%E6%96%B9%E6%9F%A5%E8%A1%A8/" title="2的n次方查表">2的n次方查表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-22T05:39:10.000Z" title="发表于 2021-09-22 13:39:10">2021-09-22</time></span></div><div class="content">太麻烦了于是决定直接记录一下了TvT打表好助手，耶！
+关于我训练赛的时算30个*2错了3个这件事
+正文！！2的1次方：22的2次方：42的3次方：82的4次方：162的5次方：322的6次方：642的7次方：1282的8次方：2562的9次方：5122的10次方：10242的11次方：20482的12次方：40962的13次方：81922的14次方：163842的15次方：327682的16次方：655362的17次方：1310722的18次方：2621442的19次方：5242882的20次方：10485762的21次方：20971522的22次方：41943042的23次方：83886082的24次方：167772162的25次方：335544322的26次方：671088642的27次方：1342177282的28次方：2684354562的29次方：5368709122的30次方：10737418242的31次方：21474836482的32次方：42949672962的33次方：85899345922的34次方：171798691842的35次方：343597383682的3 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/09/04/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%E4%BB%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E5%BC%80%E5%A7%8B/" title="新的一天从快速幂开始">     <img class="post_bg" src="http://imgsrc.baidu.com/forum/pic/item/5678eb24bc315c6086bfe92086b1cb134854775b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的一天从快速幂开始"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/04/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%E4%BB%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E5%BC%80%E5%A7%8B/" title="新的一天从快速幂开始">新的一天从快速幂开始</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-04T12:25:45.000Z" title="发表于 2021-09-04 20:25:45">2021-09-04</time></span></div><div class="content">前言因为数论太差了所以就决定从数论开始了，但是也不知道数论有什么就想起一个写一个了（雾）
+所以新的一天从快速幂开始！！
+正文引入让我们先来看一道快速幂的模板题：Problem - 2035 (hdu.edu.cn)
+题面：
+求A^B的最后三位数表示的整数。说明：A^B的含义是“A的B次方”
+Input：
+输入数据包含多个测试实例，每个实例占一行，由两个正整数A和B组成（1&lt;=A,B&lt;=10000），如果A=0, B=0，则表示输入数据的结束，不做处理。
+Output：
+对于每个测试实例，请输出A^B的最后三位表示的整数，每个输出占一行。
+相信大家在初学程序设计语言时应该都练习过求幂，只要写一个简单的循环就能轻松完成。
+大概代码是这样的：
+1234567//a为底数，b为指数int normalpow(int a,int b)&#123;	int res = 1;//结果 	for(register int i=1;i&lt;=b;i++) res*=a;	return res; &#125;
 
-<h3 id="2-2-配置本地仓库"><a href="#2-2-配置本地仓库" class="headerlink" title="2.2 配置本地仓库"></a>2.2 配置本地仓库</h3><ol>
-<li>创建一个空目录作为本地Git仓库</li>
-<li>在目录里右键打开 Git bash</li>
-<li>执行命令 <code>git init</code></li>
-<li>创建成功后目录里会有一个.git目录</li>
-</ol>
-<h2 id="3-Git常用指令"><a href="#3-Git常用指令" class="headerlink" title="3 Git常用指令"></a>3 Git常用指令</h2><h3 id="3-1-文件状态转换"><a href="#3-1-文件状态转换" class="headerlink" title="3.1 文件状态转换"></a>3.1 文件状态转换</h3><ol>
-<li>使用 git add 命令 工作区 -&gt; 暂存区</li>
-<li>使用 git commit 命令 暂存区 -&gt; 本地仓库</li>
-</ol>
-<h3 id="3-2-查看修改的状态"><a href="#3-2-查看修改的状态" class="headerlink" title="3.2 查看修改的状态"></a>3.2 查看修改的状态</h3><ul>
-<li>执行命令 <code>git status</code></li>
-</ul>
-<h3 id="3-3-提交工作区到暂存区"><a href="#3-3-提交工作区到暂存区" class="headerlink" title="3.3 提交工作区到暂存区"></a>3.3 提交工作区到暂存区</h3><ol>
-<li>执行命令 <code>git add .</code></li>
-<li>如果有想要忽略的文件，创建一个 .gitignore 文件，将文件名写在里面</li>
-</ol>
-<h3 id="3-4-提交暂存区到本地仓库"><a href="#3-4-提交暂存区到本地仓库" class="headerlink" title="3.4 提交暂存区到本地仓库"></a>3.4 提交暂存区到本地仓库</h3><ul>
-<li>执行命令 <code>git commit -m &quot; &quot;</code> 双引号内是你的commit内容</li>
-</ul>
-<h3 id="3-5-查看提交日志"><a href="#3-5-查看提交日志" class="headerlink" title="3.5 查看提交日志"></a>3.5 查看提交日志</h3><ul>
-<li>执行命令 <code>git log [options]</code>（前面配置的）<ul>
-<li>options包含：<ul>
-<li><code>--all</code> 显示所有分支</li>
-<li><code>--pretty=oneline</code> 提交信息显示为一行</li>
-<li><code>--abbrev-commit</code> 使输出的commitid更简洁</li>
-<li><code>--graph</code> 以图的形式显示</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果要查看已经删除的提交记录，执行命令 <code>git reflog</code></li>
-</ul>
-<h3 id="3-6-版本回退"><a href="#3-6-版本回退" class="headerlink" title="3.6 版本回退"></a>3.6 版本回退</h3><ul>
-<li>执行命令 <code>git reset --hard &quot;commitid&quot;</code> commitid可以在log中查看</li>
-</ul>
-<h2 id="4-分支"><a href="#4-分支" class="headerlink" title="4 分支"></a>4 分支</h2><h3 id="4-1-查看本地分支"><a href="#4-1-查看本地分支" class="headerlink" title="4.1 查看本地分支"></a>4.1 查看本地分支</h3><ul>
-<li>执行命令 <code>git branch</code></li>
-</ul>
-<h3 id="4-2-创建本地分支"><a href="#4-2-创建本地分支" class="headerlink" title="4.2 创建本地分支"></a>4.2 创建本地分支</h3><ul>
-<li>执行命令 <code>git branch branchname</code> branchname为分支名</li>
-</ul>
-<h3 id="4-3-切换分支"><a href="#4-3-切换分支" class="headerlink" title="4.3 切换分支"></a>4.3 切换分支</h3><ul>
-<li>执行命令 <code>git checkout branchname</code></li>
-<li>如果想要切换到一个不存在的分支（切换的同时创建分支），执行命令 <code>git checkout -b branchname</code></li>
-</ul>
-<h3 id="4-4-合并分支"><a href="#4-4-合并分支" class="headerlink" title="4.4 合并分支"></a>4.4 合并分支</h3><ol>
-<li>切换到目标分支</li>
-<li>执行命令 <code>git merge branchname</code></li>
-</ol>
-<h3 id="4-5-删除分支"><a href="#4-5-删除分支" class="headerlink" title="4.5 删除分支"></a>4.5 删除分支</h3><p>只能删除当前分支以外的分支</p>
-<ul>
-<li><code>git branch -d branchname</code> 删除分支事，需要做各种检查</li>
-<li><code>git branch -D branchname</code> 不做任何检查，强制删除分支</li>
-</ul>
-<h3 id="4-6-分支重命名"><a href="#4-6-分支重命名" class="headerlink" title="4.6 分支重命名"></a>4.6 分支重命名</h3><ul>
-<li>执行命令 <code>git branch -m oldname newname</code></li>
-</ul>
-<h3 id="4-7-解决冲突"><a href="#4-7-解决冲突" class="headerlink" title="4.7 解决冲突"></a>4.7 解决冲突</h3><p>两个分支对文件的修改存在冲突（如同时修改了同一文件的同一行），就要手动解决冲突</p>
-<ol>
-<li>处理文件中冲突的地方</li>
-<li>提交到缓存区</li>
-<li>提交到仓库（不用加-m）</li>
-</ol>
-<h2 id="5-Git远程仓库"><a href="#5-Git远程仓库" class="headerlink" title="5 Git远程仓库"></a>5 Git远程仓库</h2><p>这里选择了github</p>
-<h3 id="5-1-创建SSH-Key"><a href="#5-1-创建SSH-Key" class="headerlink" title="5.1 创建SSH Key"></a>5.1 创建SSH Key</h3><ul>
-<li>查询用户主目录下是否存在.ssh文件，里面是否有id_rsa与id_rsa.pub这两个文件<ul>
-<li>如果没有，在开始菜单中找到GitBash，输入 <code>ssh-keygen -t rsa -C &quot;your_email&quot;</code> <strong>双引号内为github注册使用的邮箱</strong></li>
-</ul>
-</li>
-</ul>
-<h3 id="5-2-github填写SSH-Key"><a href="#5-2-github填写SSH-Key" class="headerlink" title="5.2 github填写SSH Key"></a>5.2 github填写SSH Key</h3><ol>
-<li>点击右上角头像，打开“Settings”-“Account settings”-“SSH Keys”页面</li>
-<li>点击“New SSH Key”</li>
-<li>在Key里填写id_rsa.pub的内容</li>
-</ol>
-<h3 id="5-3-验证是否成功"><a href="#5-3-验证是否成功" class="headerlink" title="5.3 验证是否成功"></a>5.3 验证是否成功</h3><ul>
-<li><p>在GitBash里输入 <code>ssh -T git@github.com</code><br>第一次设置需要输入yes，如果出现：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi xxx! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+但是，当我们求解2^100时，计算出来的结果却为0 TAT
+这是因为int所能存 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/02/HUT%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%E7%AC%AC%E4%B8%80%E5%9C%BA%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT新生训练赛第一场赛后总结">     <img class="post_bg" src="https://cdn.mfjl.wiki/thumb/2/21/%E5%BF%A7.png/500px-%E5%BF%A7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HUT新生训练赛第一场赛后总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/02/HUT%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%E7%AC%AC%E4%B8%80%E5%9C%BA%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT新生训练赛第一场赛后总结">HUT新生训练赛第一场赛后总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-02T09:53:22.000Z" title="发表于 2021-09-02 17:53:22">2021-09-02</time></span></div><div class="content">前言建议改名“新生被爆锤赛”QAQ
+放个链接：新生训练赛第一场 - Virtual Judge (vjudge.net)
+正文T1 题目没按难易排有趣的题面：
+众所周知，贼龙有着“大胃怪物王”的称号，当他饿肚子的时候会变得异常暴躁，有事甚至会攻击那些远比自己强大的怪物，在捕杀了草食龙后，贼龙会将其一口气尸体整个吞下去，此时贼龙的腹部会十分夸张的涨大，让人不由得想起冰海里的化鲛。在捕猎成功后，贼龙会回到自己的领地，把捕获到的猎物吐到地上，然后唤来小贼龙们进食。
+每条贼龙要哺育的小贼龙的数量各不相同，每条小贼龙都只需要进食一份肉块，古代树森林里也生活着体型各不相同的草食龙，分别为大型，中型，小型，分别能分成10、8、6块，贼龙吞下他们分别需要25、20、15分钟。(贼龙肚皮贼大，能吞好几只一起带回去)
+如果贼龙需要喂养n条小贼龙，那么你的任务是确定贼龙吞下的草食龙至少能分成n份肉块所需要的最小分钟数。
+如果有12条小贼龙需要喂养，贼龙就必须带回至少能分成12块的草食龙，他可以带回2头小型的，正好12份，需要30分钟。
+如果有15条小贼龙需要喂养，贼龙就必须带回至少能分成15块的草食龙，他可 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/09/02/hello-world/" title="Hello World">     <img class="post_bg" src="https://cdn.luogu.com.cn/upload/image_hosting/j22lfi54.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/02/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T16:30:36.014Z" title="发表于 2021-09-02 00:30:36">2021-09-02</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-<p>则为成功</p>
-</li>
-</ul>
-<h3 id="5-4-在github建仓库"><a href="#5-4-在github建仓库" class="headerlink" title="5.4 在github建仓库"></a>5.4 在github建仓库</h3><ul>
-<li>建一个仓库用来存放项目</li>
-</ul>
-<h3 id="5-5-关联远程仓库"><a href="#5-5-关联远程仓库" class="headerlink" title="5.5 关联远程仓库"></a>5.5 关联远程仓库</h3><p>有两种可选方法</p>
-<h4 id="5-5-1-clone仓库地址到本地"><a href="#5-5-1-clone仓库地址到本地" class="headerlink" title="5.5.1 clone仓库地址到本地"></a>5.5.1 clone仓库地址到本地</h4><p>这种方法可以实现一个仓库存放多个不同的代码</p>
-<ol>
-<li>在&lt;&gt;Code那里复制地址</li>
-<li>clone到本地 （可以修改名称），<strong>记得改成自己仓库的地址（</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/PerseisQAQ/projects.git</span><br></pre></td></tr></table></figure>
+More info: Writing
+Run server1$ hexo server
 
-<p>在文件夹的内部可以创建多个不同的文件夹，不同的文件夹放置不同的项目代码。这样就可以实现很多不同的项目代码放置到同一个代码仓库中</p>
-<h4 id="5-5-2-关联远程仓库到本地仓库"><a href="#5-5-2-关联远程仓库到本地仓库" class="headerlink" title="5.5.2 关联远程仓库到本地仓库"></a>5.5.2 关联远程仓库到本地仓库</h4><ul>
-<li>根据仓库地址，在本地仓库的命令行输入，<strong>记得改成自己仓库的地址（</strong></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/PerseisQAQ/projects.git</span><br></pre></td></tr></table></figure>
+More info: Server
+Generate static files1$ hexo generate
 
-<h3 id="5-6-本地内容上传"><a href="#5-6-本地内容上传" class="headerlink" title="5.6 本地内容上传"></a>5.6 本地内容上传</h3><p>关联好仓库后就可以把本地仓库的内容推送到远程仓库了，在GitBash输入</p>
-<ul>
-<li>如果新建的远程仓库是空的</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-<ul>
-<li>如果远程仓库非空</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://tse1-mm.cn.bing.net/th/id/OIP-C._cqrR1y2w5HDuRCDxlr71QAAAA?pid=ImgDet&amp;rs=1" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">PerseisQAQ</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">You've got glitter in my veins</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第二次面试赛后总结"><img src="http://imgsrc.baidu.com/forum/pic/item/f52ff027cffc1e17f9d1e3964790f603728de9b7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HUT实验室第二次面试赛后总结"/></a><div class="content"><a class="title" href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第二次面试赛后总结">HUT实验室第二次面试赛后总结</a><time datetime="2021-10-19T13:48:23.000Z" title="发表于 2021-10-19 21:48:23">2021-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第一次面试赛后总结"><img src="https://inews.gtimg.com/newsapp_bt/0/13510359203/1000" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HUT实验室第一次面试赛后总结"/></a><div class="content"><a class="title" href="/2021/10/19/HUT%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT实验室第一次面试赛后总结">HUT实验室第一次面试赛后总结</a><time datetime="2021-10-19T12:24:23.000Z" title="发表于 2021-10-19 20:24:23">2021-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/22/2%E7%9A%84n%E6%AC%A1%E6%96%B9%E6%9F%A5%E8%A1%A8/" title="2的n次方查表"><img src="https://tse1-mm.cn.bing.net/th/id/R-C.8c439522adbaee8344b4b1466bddd527?rik=gEz6AtPJjR06EQ&amp;riu=http%3a%2f%2fi0.hdslb.com%2fbfs%2farchive%2f00d9450e0f78eead92ce09152d7b0d21490c3540.jpg&amp;ehk=A2Y1v8uvDX%2bpUKSKVvBF4jVG9yWJucoBjs3NUSatUA0%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2的n次方查表"/></a><div class="content"><a class="title" href="/2021/09/22/2%E7%9A%84n%E6%AC%A1%E6%96%B9%E6%9F%A5%E8%A1%A8/" title="2的n次方查表">2的n次方查表</a><time datetime="2021-09-22T05:39:10.000Z" title="发表于 2021-09-22 13:39:10">2021-09-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/04/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%E4%BB%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E5%BC%80%E5%A7%8B/" title="新的一天从快速幂开始"><img src="http://imgsrc.baidu.com/forum/pic/item/5678eb24bc315c6086bfe92086b1cb134854775b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的一天从快速幂开始"/></a><div class="content"><a class="title" href="/2021/09/04/%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%E4%BB%8E%E5%BF%AB%E9%80%9F%E5%B9%82%E5%BC%80%E5%A7%8B/" title="新的一天从快速幂开始">新的一天从快速幂开始</a><time datetime="2021-09-04T12:25:45.000Z" title="发表于 2021-09-04 20:25:45">2021-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/02/HUT%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%E7%AC%AC%E4%B8%80%E5%9C%BA%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT新生训练赛第一场赛后总结"><img src="https://cdn.mfjl.wiki/thumb/2/21/%E5%BF%A7.png/500px-%E5%BF%A7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HUT新生训练赛第一场赛后总结"/></a><div class="content"><a class="title" href="/2021/09/02/HUT%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%E7%AC%AC%E4%B8%80%E5%9C%BA%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="HUT新生训练赛第一场赛后总结">HUT新生训练赛第一场赛后总结</a><time datetime="2021-09-02T09:53:22.000Z" title="发表于 2021-09-02 17:53:22">2021-09-02</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">工具</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 1.1em; color: #999">数论</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" style="font-size: 1.1em; color: #999">知识整理</a> <a href="/tags/%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" style="font-size: 1.5em; color: #99a9bf">赛后总结</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-02-17T18:07:51.437Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By PerseisQAQ</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="/img/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
 
-<h3 id="5-7-从远程仓库抓取与拉取"><a href="#5-7-从远程仓库抓取与拉取" class="headerlink" title="5.7 从远程仓库抓取与拉取"></a>5.7 从远程仓库抓取与拉取</h3><ul>
-<li>抓取命令 <code>get fetch [远端名称][分支名]</code><ul>
-<li>将仓库里的更新都抓取到本地，不进行合并</li>
-<li>如果不指定远端名称和分支名，则抓取所有分支</li>
-</ul>
-</li>
-<li>拉取命令 <code>git pull [远端名称][分支名]</code><ul>
-<li>将仓库里的更新拉到本地并自动进行合并（fetch+merge）</li>
-<li>如果不指定远端名称和分支名，则抓取所有并更新当前分支</li>
-</ul>
-</li>
-</ul>
-<h3 id="5-8-远程解决冲突"><a href="#5-8-远程解决冲突" class="headerlink" title="5.8 远程解决冲突"></a>5.8 远程解决冲突</h3><ul>
-<li>push之前先pull一下，看看有没有冲突，有冲突在本地解决掉再push</li>
-</ul>
-<h2 id="6-记录一下遇到的奇怪问题们"><a href="#6-记录一下遇到的奇怪问题们" class="headerlink" title="6 记录一下遇到的奇怪问题们"></a>6 记录一下遇到的奇怪问题们</h2><h3 id="6-1-clone到本地仓库时"><a href="#6-1-clone到本地仓库时" class="headerlink" title="6.1 clone到本地仓库时"></a>6.1 clone到本地仓库时</h3><h4 id="6-1-1-端口443连接失败"><a href="#6-1-1-端口443连接失败" class="headerlink" title="6.1.1 端口443连接失败"></a>6.1.1 端口443连接失败</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Failed to connect to github.com port 443 after 21271 ms: Couldn&#x27;t connect to server</span><br></pre></td></tr></table></figure>
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
 
-<ul>
-<li>原因：正在使用VPN，VPN的使用可能会改变本机的系统端口号，从而影响到Git的正常连接</li>
-<li>解决方法：</li>
-</ul>
-<ol>
-<li>打开“设置 -&gt; 网络和Internet -&gt; 代理”，记录下当前的端口号</li>
-<li>设置Git端口号，<strong>假设当前端口号为7890</strong>，使用命令</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">git config --global https.proxy 127.0.0.1:7890</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/07/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="clybk1g2300005gv36rrm80ri" data-title="Git学习笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/07/07/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/07/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Git学习笔记</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>
