@@ -1238,7 +1238,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0bf1bf;
+    background: #a3ffff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1633,7 +1633,7 @@ pre code {
   width: 100%;
 }
 .with-love {
-  color: #f00;
+  color: #628bb5;
   display: inline-block;
   margin: 0 5px;
 }
@@ -1692,6 +1692,16 @@ pre code {
 }
 .back-to-top.back-to-top-on {
   bottom: 30px;
+}
+.reading-progress-bar {
+  --progress: 0;
+  background: #37c6c0;
+  height: 3px;
+  position: fixed;
+  z-index: 50;
+  width: var(--progress);
+  left: 0;
+  bottom: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
