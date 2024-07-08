@@ -1,20 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Git学习笔记</title>
-      <link href="/2024/07/07/36/"/>
-      <url>/2024/07/07/36/</url>
-      
-        <content type="html"><![CDATA[<p>本学习笔记基于b站黑马程序员Git教程<a href="https://www.bilibili.com/video/BV1MU4y1Y7h5/">https://www.bilibili.com/video/BV1MU4y1Y7h5/</a></p><span id="more"></span><h2 id="Git下载与安装"><a href="#Git下载与安装" class="headerlink" title="Git下载与安装"></a>Git下载与安装</h2><p><a href="https://git-scm.com/">https://git-scm.com/</a> 在这里下载安装</p><h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="设置用户信息"><a href="#设置用户信息" class="headerlink" title="设置用户信息"></a>设置用户信息</h4><ol><li>设置用户名 <code>git config --global user.name &quot;yourname&quot;</code><br>双引号内为用户名</li><li>设置邮箱 <code>git config --global user.email &quot;youremail&quot;</code><br>双引号内为邮箱</li></ol><h4 id="为常用命令配置别名"><a href="#为常用命令配置别名" class="headerlink" title="为常用命令配置别名"></a>为常用命令配置别名</h4><ol><li>在用户目录下，创建 .bashrc 文件<br>可以打开GitBash 执行 <code>touch ~/.bashrc</code></li><li>在 .bashrc 中输入:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看git提交日志</span></span><br><span class="line"><span class="built_in">alias</span> git-log=<span class="string">&#x27;git log --pretty=oneline --all --graph --abbrev-commit&#x27;</span></span><br><span class="line"><span class="comment"># 输出当前目录所有文件与基本信息</span></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">&#x27;ls -al&#x27;</span></span><br></pre></td></tr></table></figure><h3 id="配置本地仓库"><a href="#配置本地仓库" class="headerlink" title="配置本地仓库"></a>配置本地仓库</h3><ol><li>创建一个空目录作为本地Git仓库</li><li>在目录里右键打开 Git bash</li><li>执行命令 <code>git init</code></li><li>创建成功后目录里会有一个.git目录</li></ol><h2 id="Git常用指令"><a href="#Git常用指令" class="headerlink" title="Git常用指令"></a>Git常用指令</h2><h3 id="文件状态转换"><a href="#文件状态转换" class="headerlink" title="文件状态转换"></a>文件状态转换</h3><ol><li>使用 git add 命令 工作区 -&gt; 暂存区</li><li>使用 git commit 命令 暂存区 -&gt; 本地仓库</li></ol><h3 id="查看修改的状态"><a href="#查看修改的状态" class="headerlink" title="查看修改的状态"></a>查看修改的状态</h3><ul><li>执行命令 <code>git status</code></li></ul><h3 id="提交工作区到暂存区"><a href="#提交工作区到暂存区" class="headerlink" title="提交工作区到暂存区"></a>提交工作区到暂存区</h3><ol><li>执行命令 <code>git add .</code></li><li>如果有想要忽略的文件，创建一个 .gitignore 文件，将文件名写在里面</li></ol><h3 id="提交暂存区到本地仓库"><a href="#提交暂存区到本地仓库" class="headerlink" title="提交暂存区到本地仓库"></a>提交暂存区到本地仓库</h3><ul><li>执行命令 <code>git commit -m &quot; &quot;</code> 双引号内是你的commit内容</li></ul><h3 id="查看提交日志"><a href="#查看提交日志" class="headerlink" title="查看提交日志"></a>查看提交日志</h3><ul><li>执行命令 <code>git log [options]</code>（前面配置的）<ul><li>options包含：<ul><li><code>--all</code> 显示所有分支</li><li><code>--pretty=oneline</code> 提交信息显示为一行</li><li><code>--abbrev-commit</code> 使输出的commitid更简洁</li><li><code>--graph</code> 以图的形式显示</li></ul></li></ul></li><li>如果要查看已经删除的提交记录，执行命令 <code>git reflog</code></li></ul><h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul><li>执行命令 <code>git reset --hard &quot;commitid&quot;</code> commitid可以在log中查看</li></ul><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="查看本地分支"><a href="#查看本地分支" class="headerlink" title="查看本地分支"></a>查看本地分支</h3><ul><li>执行命令 <code>git branch</code></li></ul><h3 id="创建本地分支"><a href="#创建本地分支" class="headerlink" title="创建本地分支"></a>创建本地分支</h3><ul><li>执行命令 <code>git branch branchname</code> branchname为分支名</li></ul><h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><ul><li>执行命令 <code>git checkout branchname</code></li><li>如果想要切换到一个不存在的分支（切换的同时创建分支），执行命令 <code>git checkout -b branchname</code></li></ul><h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><ol><li>切换到目标分支</li><li>执行命令 <code>git merge branchname</code></li></ol><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>只能删除当前分支以外的分支</p><ul><li><code>git branch -d branchname</code> 删除分支事，需要做各种检查</li><li><code>git branch -D branchname</code> 不做任何检查，强制删除分支</li></ul><h3 id="分支重命名"><a href="#分支重命名" class="headerlink" title="分支重命名"></a>分支重命名</h3><ul><li>执行命令 <code>git branch -m oldname newname</code></li></ul><h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>两个分支对文件的修改存在冲突（如同时修改了同一文件的同一行），就要手动解决冲突</p><ol><li>处理文件中冲突的地方</li><li>提交到缓存区</li><li>提交到仓库（不用加-m）</li></ol><h2 id="Git远程仓库"><a href="#Git远程仓库" class="headerlink" title="Git远程仓库"></a>Git远程仓库</h2><p>这里选择了github</p><h3 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h3><ul><li>查询用户主目录下是否存在.ssh文件，里面是否有id_rsa与id_rsa.pub这两个文件<ul><li>如果没有，在开始菜单中找到GitBash，输入 <code>ssh-keygen -t rsa -C &quot;your_email&quot;</code> <strong>双引号内为github注册使用的邮箱</strong></li></ul></li></ul><h3 id="github填写SSH-Key"><a href="#github填写SSH-Key" class="headerlink" title="github填写SSH Key"></a>github填写SSH Key</h3><ol><li>点击右上角头像，打开“Settings”-“Account settings”-“SSH Keys”页面</li><li>点击“New SSH Key”</li><li>在Key里填写id_rsa.pub的内容</li></ol><h3 id="验证是否成功"><a href="#验证是否成功" class="headerlink" title="验证是否成功"></a>验证是否成功</h3><ul><li><p>在GitBash里输入 <code>ssh -T git@github.com</code><br>第一次设置需要输入yes，如果出现：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi xxx! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure><p>则为成功</p></li></ul><h3 id="在github建仓库"><a href="#在github建仓库" class="headerlink" title="在github建仓库"></a>在github建仓库</h3><ul><li>建一个仓库用来存放项目</li></ul><h3 id="关联远程仓库"><a href="#关联远程仓库" class="headerlink" title="关联远程仓库"></a>关联远程仓库</h3><p>有两种可选方法</p><h4 id="clone仓库地址到本地"><a href="#clone仓库地址到本地" class="headerlink" title="clone仓库地址到本地"></a>clone仓库地址到本地</h4><p>这种方法可以实现一个仓库存放多个不同的代码</p><ol><li>在&lt;&gt;Code那里复制地址</li><li>clone到本地 （可以修改名称），<strong>记得改成自己仓库的地址（</strong></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/PerseisQAQ/projects.git</span><br></pre></td></tr></table></figure><p>在文件夹的内部可以创建多个不同的文件夹，不同的文件夹放置不同的项目代码。这样就可以实现很多不同的项目代码放置到同一个代码仓库中</p><h4 id="关联远程仓库到本地仓库"><a href="#关联远程仓库到本地仓库" class="headerlink" title="关联远程仓库到本地仓库"></a>关联远程仓库到本地仓库</h4><ul><li>根据仓库地址，在本地仓库的命令行输入，<strong>记得改成自己仓库的地址（</strong></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/PerseisQAQ/projects.git</span><br></pre></td></tr></table></figure><h3 id="本地内容上传"><a href="#本地内容上传" class="headerlink" title="本地内容上传"></a>本地内容上传</h3><p>关联好仓库后就可以把本地仓库的内容推送到远程仓库了，在GitBash输入</p><ul><li>如果新建的远程仓库是空的</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><ul><li>如果远程仓库非空</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure><h3 id="从远程仓库抓取与拉取"><a href="#从远程仓库抓取与拉取" class="headerlink" title="从远程仓库抓取与拉取"></a>从远程仓库抓取与拉取</h3><ul><li>抓取命令 <code>get fetch [远端名称][分支名]</code><ul><li>将仓库里的更新都抓取到本地，不进行合并</li><li>如果不指定远端名称和分支名，则抓取所有分支</li></ul></li><li>拉取命令 <code>git pull [远端名称][分支名]</code><ul><li>将仓库里的更新拉到本地并自动进行合并（fetch+merge）</li><li>如果不指定远端名称和分支名，则抓取所有并更新当前分支</li></ul></li></ul><h3 id="远程解决冲突"><a href="#远程解决冲突" class="headerlink" title="远程解决冲突"></a>远程解决冲突</h3><ul><li>push之前先pull一下，看看有没有冲突，有冲突在本地解决掉再push</li></ul><h2 id="记录一下遇到的奇怪问题们"><a href="#记录一下遇到的奇怪问题们" class="headerlink" title="记录一下遇到的奇怪问题们"></a>记录一下遇到的奇怪问题们</h2><h3 id="clone到本地仓库时"><a href="#clone到本地仓库时" class="headerlink" title="clone到本地仓库时"></a>clone到本地仓库时</h3><h4 id="端口443连接失败"><a href="#端口443连接失败" class="headerlink" title="端口443连接失败"></a>端口443连接失败</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Failed to connect to github.com port 443 after 21271 ms: Couldn&#x27;t connect to server</span><br></pre></td></tr></table></figure><ul><li>原因：正在使用VPN，VPN的使用可能会改变本机的系统端口号，从而影响到Git的正常连接</li><li>解决方法：</li></ul><ol><li>打开“设置 -&gt; 网络和Internet -&gt; 代理”，记录下当前的端口号</li><li>设置Git端口号，<strong>假设当前端口号为7890</strong>，使用命令</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">git config --global https.proxy 127.0.0.1:7890</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>Git学习笔记</title>
+    <url>/2024/07/07/36/</url>
+    <content><![CDATA[<p>本学习笔记基于b站黑马程序员Git教程<a href="https://www.bilibili.com/video/BV1MU4y1Y7h5/">https://www.bilibili.com/video/BV1MU4y1Y7h5/</a></p>
+<span id="more"></span>
+
+<h2 id="Git下载与安装"><a href="#Git下载与安装" class="headerlink" title="Git下载与安装"></a>Git下载与安装</h2><p><a href="https://git-scm.com/">https://git-scm.com/</a> 在这里下载安装</p>
+<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="设置用户信息"><a href="#设置用户信息" class="headerlink" title="设置用户信息"></a>设置用户信息</h4><ol>
+<li>设置用户名 <code>git config --global user.name &quot;yourname&quot;</code><br>双引号内为用户名</li>
+<li>设置邮箱 <code>git config --global user.email &quot;youremail&quot;</code><br>双引号内为邮箱</li>
+</ol>
+<h4 id="为常用命令配置别名"><a href="#为常用命令配置别名" class="headerlink" title="为常用命令配置别名"></a>为常用命令配置别名</h4><ol>
+<li>在用户目录下，创建 .bashrc 文件<br>可以打开GitBash 执行 <code>touch ~/.bashrc</code></li>
+<li>在 .bashrc 中输入:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看git提交日志</span></span><br><span class="line"><span class="built_in">alias</span> git-log=<span class="string">&#x27;git log --pretty=oneline --all --graph --abbrev-commit&#x27;</span></span><br><span class="line"><span class="comment"># 输出当前目录所有文件与基本信息</span></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">&#x27;ls -al&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="配置本地仓库"><a href="#配置本地仓库" class="headerlink" title="配置本地仓库"></a>配置本地仓库</h3><ol>
+<li>创建一个空目录作为本地Git仓库</li>
+<li>在目录里右键打开 Git bash</li>
+<li>执行命令 <code>git init</code></li>
+<li>创建成功后目录里会有一个.git目录</li>
+</ol>
+<h2 id="Git常用指令"><a href="#Git常用指令" class="headerlink" title="Git常用指令"></a>Git常用指令</h2><h3 id="文件状态转换"><a href="#文件状态转换" class="headerlink" title="文件状态转换"></a>文件状态转换</h3><ol>
+<li>使用 git add 命令 工作区 -&gt; 暂存区</li>
+<li>使用 git commit 命令 暂存区 -&gt; 本地仓库</li>
+</ol>
+<h3 id="查看修改的状态"><a href="#查看修改的状态" class="headerlink" title="查看修改的状态"></a>查看修改的状态</h3><ul>
+<li>执行命令 <code>git status</code></li>
+</ul>
+<h3 id="提交工作区到暂存区"><a href="#提交工作区到暂存区" class="headerlink" title="提交工作区到暂存区"></a>提交工作区到暂存区</h3><ol>
+<li>执行命令 <code>git add .</code></li>
+<li>如果有想要忽略的文件，创建一个 .gitignore 文件，将文件名写在里面</li>
+</ol>
+<h3 id="提交暂存区到本地仓库"><a href="#提交暂存区到本地仓库" class="headerlink" title="提交暂存区到本地仓库"></a>提交暂存区到本地仓库</h3><ul>
+<li>执行命令 <code>git commit -m &quot; &quot;</code> 双引号内是你的commit内容</li>
+</ul>
+<h3 id="查看提交日志"><a href="#查看提交日志" class="headerlink" title="查看提交日志"></a>查看提交日志</h3><ul>
+<li>执行命令 <code>git log [options]</code>（前面配置的）<ul>
+<li>options包含：<ul>
+<li><code>--all</code> 显示所有分支</li>
+<li><code>--pretty=oneline</code> 提交信息显示为一行</li>
+<li><code>--abbrev-commit</code> 使输出的commitid更简洁</li>
+<li><code>--graph</code> 以图的形式显示</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>如果要查看已经删除的提交记录，执行命令 <code>git reflog</code></li>
+</ul>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li>执行命令 <code>git reset --hard &quot;commitid&quot;</code> commitid可以在log中查看</li>
+</ul>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="查看本地分支"><a href="#查看本地分支" class="headerlink" title="查看本地分支"></a>查看本地分支</h3><ul>
+<li>执行命令 <code>git branch</code></li>
+</ul>
+<h3 id="创建本地分支"><a href="#创建本地分支" class="headerlink" title="创建本地分支"></a>创建本地分支</h3><ul>
+<li>执行命令 <code>git branch branchname</code> branchname为分支名</li>
+</ul>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><ul>
+<li>执行命令 <code>git checkout branchname</code></li>
+<li>如果想要切换到一个不存在的分支（切换的同时创建分支），执行命令 <code>git checkout -b branchname</code></li>
+</ul>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><ol>
+<li>切换到目标分支</li>
+<li>执行命令 <code>git merge branchname</code></li>
+</ol>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>只能删除当前分支以外的分支</p>
+<ul>
+<li><code>git branch -d branchname</code> 删除分支事，需要做各种检查</li>
+<li><code>git branch -D branchname</code> 不做任何检查，强制删除分支</li>
+</ul>
+<h3 id="分支重命名"><a href="#分支重命名" class="headerlink" title="分支重命名"></a>分支重命名</h3><ul>
+<li>执行命令 <code>git branch -m oldname newname</code></li>
+</ul>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>两个分支对文件的修改存在冲突（如同时修改了同一文件的同一行），就要手动解决冲突</p>
+<ol>
+<li>处理文件中冲突的地方</li>
+<li>提交到缓存区</li>
+<li>提交到仓库（不用加-m）</li>
+</ol>
+<h2 id="Git远程仓库"><a href="#Git远程仓库" class="headerlink" title="Git远程仓库"></a>Git远程仓库</h2><p>这里选择了github</p>
+<h3 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h3><ul>
+<li>查询用户主目录下是否存在.ssh文件，里面是否有id_rsa与id_rsa.pub这两个文件<ul>
+<li>如果没有，在开始菜单中找到GitBash，输入 <code>ssh-keygen -t rsa -C &quot;your_email&quot;</code> <strong>双引号内为github注册使用的邮箱</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="github填写SSH-Key"><a href="#github填写SSH-Key" class="headerlink" title="github填写SSH Key"></a>github填写SSH Key</h3><ol>
+<li>点击右上角头像，打开“Settings”-“Account settings”-“SSH Keys”页面</li>
+<li>点击“New SSH Key”</li>
+<li>在Key里填写id_rsa.pub的内容</li>
+</ol>
+<h3 id="验证是否成功"><a href="#验证是否成功" class="headerlink" title="验证是否成功"></a>验证是否成功</h3><ul>
+<li><p>在GitBash里输入 <code>ssh -T git@github.com</code><br>第一次设置需要输入yes，如果出现：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Hi xxx! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+
+<p>则为成功</p>
+</li>
+</ul>
+<h3 id="在github建仓库"><a href="#在github建仓库" class="headerlink" title="在github建仓库"></a>在github建仓库</h3><ul>
+<li>建一个仓库用来存放项目</li>
+</ul>
+<h3 id="关联远程仓库"><a href="#关联远程仓库" class="headerlink" title="关联远程仓库"></a>关联远程仓库</h3><p>有两种可选方法</p>
+<h4 id="clone仓库地址到本地"><a href="#clone仓库地址到本地" class="headerlink" title="clone仓库地址到本地"></a>clone仓库地址到本地</h4><p>这种方法可以实现一个仓库存放多个不同的代码</p>
+<ol>
+<li>在&lt;&gt;Code那里复制地址</li>
+<li>clone到本地 （可以修改名称），<strong>记得改成自己仓库的地址（</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/PerseisQAQ/projects.git</span><br></pre></td></tr></table></figure>
+
+<p>在文件夹的内部可以创建多个不同的文件夹，不同的文件夹放置不同的项目代码。这样就可以实现很多不同的项目代码放置到同一个代码仓库中</p>
+<h4 id="关联远程仓库到本地仓库"><a href="#关联远程仓库到本地仓库" class="headerlink" title="关联远程仓库到本地仓库"></a>关联远程仓库到本地仓库</h4><ul>
+<li>根据仓库地址，在本地仓库的命令行输入，<strong>记得改成自己仓库的地址（</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/PerseisQAQ/projects.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地内容上传"><a href="#本地内容上传" class="headerlink" title="本地内容上传"></a>本地内容上传</h3><p>关联好仓库后就可以把本地仓库的内容推送到远程仓库了，在GitBash输入</p>
+<ul>
+<li>如果新建的远程仓库是空的</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果远程仓库非空</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="从远程仓库抓取与拉取"><a href="#从远程仓库抓取与拉取" class="headerlink" title="从远程仓库抓取与拉取"></a>从远程仓库抓取与拉取</h3><ul>
+<li>抓取命令 <code>get fetch [远端名称][分支名]</code><ul>
+<li>将仓库里的更新都抓取到本地，不进行合并</li>
+<li>如果不指定远端名称和分支名，则抓取所有分支</li>
+</ul>
+</li>
+<li>拉取命令 <code>git pull [远端名称][分支名]</code><ul>
+<li>将仓库里的更新拉到本地并自动进行合并（fetch+merge）</li>
+<li>如果不指定远端名称和分支名，则抓取所有并更新当前分支</li>
+</ul>
+</li>
+</ul>
+<h3 id="远程解决冲突"><a href="#远程解决冲突" class="headerlink" title="远程解决冲突"></a>远程解决冲突</h3><ul>
+<li>push之前先pull一下，看看有没有冲突，有冲突在本地解决掉再push</li>
+</ul>
+<h2 id="记录一下遇到的奇怪问题们"><a href="#记录一下遇到的奇怪问题们" class="headerlink" title="记录一下遇到的奇怪问题们"></a>记录一下遇到的奇怪问题们</h2><h3 id="clone到本地仓库时"><a href="#clone到本地仓库时" class="headerlink" title="clone到本地仓库时"></a>clone到本地仓库时</h3><h4 id="端口443连接失败"><a href="#端口443连接失败" class="headerlink" title="端口443连接失败"></a>端口443连接失败</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">Failed to connect to github.com port 443 after 21271 ms: Couldn&#x27;t connect to server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>原因：正在使用VPN，VPN的使用可能会改变本机的系统端口号，从而影响到Git的正常连接</li>
+<li>解决方法：</li>
+</ul>
+<ol>
+<li>打开“设置 -&gt; 网络和Internet -&gt; 代理”，记录下当前的端口号</li>
+<li>设置Git端口号，<strong>假设当前端口号为7890</strong>，使用命令</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">git config --global https.proxy 127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
 </search>
