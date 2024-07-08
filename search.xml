@@ -4,6 +4,8 @@
     <title>Git学习笔记</title>
     <url>/2024/07/07/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>本学习笔记基于b站黑马程序员Git教程<a href="https://www.bilibili.com/video/BV1MU4y1Y7h5/">https://www.bilibili.com/video/BV1MU4y1Y7h5/</a></p>
+<span id="more"></span>
+
 <h2 id="Git下载与安装"><a href="#Git下载与安装" class="headerlink" title="Git下载与安装"></a>Git下载与安装</h2><p><a href="https://git-scm.com/">https://git-scm.com/</a> 在这里下载安装</p>
 <h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="设置用户信息"><a href="#设置用户信息" class="headerlink" title="设置用户信息"></a>设置用户信息</h4><ol>
 <li>设置用户名 <code>git config --global user.name &quot;yourname&quot;</code><br>双引号内为用户名</li>
