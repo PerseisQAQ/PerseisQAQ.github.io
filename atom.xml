@@ -6,7 +6,7 @@
   <link href="https://perseisqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://perseisqaq.github.io/"/>
-  <updated>2024-07-08T06:27:34.626Z</updated>
+  <updated>2024-07-11T16:34:07.000Z</updated>
   <id>https://perseisqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣每日一题2024-07-12</title>
+    <link href="https://perseisqaq.github.io/2024/07/12/07/"/>
+    <id>https://perseisqaq.github.io/2024/07/12/07/</id>
+    <published>2024-07-11T16:34:07.000Z</published>
+    <updated>2024-07-11T16:34:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>2974.最小数字游戏</p><span id="more"></span><p><a href="https://leetcode.cn/problems/minimum-number-game/description/?envType=daily-question&amp;envId=2024-07-12">https://leetcode.cn/problems/minimum-number-game/description/?envType=daily-question&amp;envId=2024-07-12</a></p><p>你有一个下标从<strong>0</strong>开始、长度为<strong>偶数</strong>的整数数组<code>nums</code>，同时还有一个空数组<code>arr</code>。Alice 和 Bob 决定玩一个游戏，游戏中每一轮 Alice 和 Bob 都会各自执行一次操作。游戏规则如下：</p><ul><li>每一轮，Alice 先从<code>nums</code>中移除一个<strong>最小</strong>元素，然后 Bob 执行同样的操作。</li><li>接着，Bob 会将移除的元素添加到数组<code>arr</code>中，然后 Alice 也执行同样的操作。</li><li>游戏持续进行，直到<code>nums</code>变为空。<br>返回结果数组<code>arr</code>。</li></ul><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>将数组从小到大排序后两两分组，对于每一个单独的分组，先将后面的数放入<code>arr</code>数组，再将前面的数放入<code>arr</code>数组。<br>也就是说放入的下标顺序是 1 0 3 2 5 4……<br>写一个for循环，步长为2，循环放入即可</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">numberGame</span><span class="params">(nums []<span class="type">int</span>)</span></span> []<span class="type">int</span> &#123;</span><br><span class="line">    n := <span class="built_in">len</span>(nums)</span><br><span class="line">    sort.Ints(nums)</span><br><span class="line">    <span class="keyword">var</span> arr []<span class="type">int</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt; n; i += <span class="number">2</span> &#123;</span><br><span class="line">        arr = <span class="built_in">append</span>(arr, nums[i])</span><br><span class="line">        arr = <span class="built_in">append</span>(arr, nums[i<span class="number">-1</span>])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;2974.最小数字游戏&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="每日一题" scheme="https://perseisqaq.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>Git学习笔记</title>
