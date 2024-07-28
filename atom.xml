@@ -6,7 +6,7 @@
   <link href="https://perseisqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://perseisqaq.github.io/"/>
-  <updated>2024-07-28T11:26:01.000Z</updated>
+  <updated>2024-07-28T17:09:25.000Z</updated>
   <id>https://perseisqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣每日一题2024-07-29</title>
+    <link href="https://perseisqaq.github.io/2024/07/29/25/"/>
+    <id>https://perseisqaq.github.io/2024/07/29/25/</id>
+    <published>2024-07-28T17:09:25.000Z</published>
+    <updated>2024-07-28T17:09:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>682.棒球比赛</p><span id="more"></span><p><a href="https://leetcode.cn/problems/baseball-game/?envType=daily-question&amp;envId=2024-07-29">https://leetcode.cn/problems/baseball-game/?envType=daily-question&amp;envId=2024-07-29</a></p><p>你现在是一场采用特殊赛制棒球比赛的记录员。这场比赛由若干回合组成，过去几回合的得分可能会影响以后几回合的得分。</p><p>比赛开始时，记录是空白的。你会得到一个记录操作的字符串列表<code>ops</code>，其中<code>ops[i]</code>是你需要记录的第 i 项操作，ops 遵循下述规则：</p><ol><li>整数 <code>x</code> - 表示本回合新获得分数 x</li><li><code>&quot;+&quot;</code> - 表示本回合新获得的得分是前两次得分的总和。题目数据保证记录此操作时前面总是存在两个有效的分数。</li><li><code>&quot;D&quot;</code>  - 表示本回合新获得的得分是前一次得分的两倍。题目数据保证记录此操作时前面总是存在一个有效的分数。</li><li><code>&quot;C&quot;</code>  - 表示前一次得分无效，将其从记录中移除。题目数据保证记录此操作时前面总是存在一个有效的分数。<br>请你返回记录中所有得分的总和。</li></ol><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>纯模拟（</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; tmp;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">calPoints</span><span class="params">(vector&lt;string&gt;&amp; operations)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = operations.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (operations[i] == <span class="string">&quot;+&quot;</span>) &#123;</span><br><span class="line">                <span class="type">int</span> x = tmp[tmp.<span class="built_in">size</span>() - <span class="number">1</span>] + tmp[tmp.<span class="built_in">size</span>() - <span class="number">2</span>];</span><br><span class="line">                tmp.<span class="built_in">push_back</span>(x);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (operations[i] == <span class="string">&quot;D&quot;</span>) &#123;</span><br><span class="line">                <span class="type">int</span> x = <span class="number">2</span> * tmp[tmp.<span class="built_in">size</span>() - <span class="number">1</span>];</span><br><span class="line">                tmp.<span class="built_in">push_back</span>(x);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (operations[i] == <span class="string">&quot;C&quot;</span>)</span><br><span class="line">                tmp.<span class="built_in">pop_back</span>();</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="type">int</span> x = <span class="built_in">stoi</span>(operations[i]);</span><br><span class="line">                tmp.<span class="built_in">push_back</span>(x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; tmp.<span class="built_in">size</span>(); i++)</span><br><span class="line">            sum += tmp[i];</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;682.棒球比赛&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="每日一题" scheme="https://perseisqaq.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日一题2024-07-28</title>
