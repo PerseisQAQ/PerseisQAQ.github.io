@@ -6,7 +6,7 @@
   <link href="https://perseisqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://perseisqaq.github.io/"/>
-  <updated>2024-07-29T16:44:36.000Z</updated>
+  <updated>2024-07-30T16:50:05.000Z</updated>
   <id>https://perseisqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣每日一题2024-07-31</title>
+    <link href="https://perseisqaq.github.io/2024/07/31/05/"/>
+    <id>https://perseisqaq.github.io/2024/07/31/05/</id>
+    <published>2024-07-30T16:50:05.000Z</published>
+    <updated>2024-07-30T16:50:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>3111.覆盖所有点的最少矩形数目</p><span id="more"></span><p><a href="https://leetcode.cn/problems/minimum-rectangles-to-cover-points/description/?envType=daily-question&amp;envId=2024-07-31">https://leetcode.cn/problems/minimum-rectangles-to-cover-points/description/?envType=daily-question&amp;envId=2024-07-31</a></p><p>给你一个二维整数数组<code>point</code>，其中<code>points[i] = [xi, yi]</code>表示二维平面内的一个点。同时给你一个整数 w 。你需要用矩形 覆盖所有 点。</p><p>每个矩形的左下角在某个点<code>(x1, 0)</code>处，且右上角在某个点<code>(x2, y2)</code>处，其中<code>x1 &lt;= x2</code>且<code>y2 &gt;= 0</code>，同时对于每个矩形都<strong>必须</strong>满足<code>x2 - x1 &lt;= w</code>。</p><p>如果一个点在矩形内或者在边上，我们说这个点被矩形覆盖了。</p><p>请你在确保每个点都<strong>至少</strong>被一个矩形覆盖的前提下，<strong>最少</strong>需要多少个矩形。</p><p><strong>注意</strong>：一个点可以被多个矩形覆盖。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>由题目可知，对矩形的y轴长度没有限制，因此第二维数组对题目没有影响<br>那么对第一维进行排序，让矩形尽可能覆盖多的点，且尽可能不浪费。<br>从左往右遍历，如果当前点没有被覆盖，那么放置一个以所在点x轴为左边界的矩形。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">minRectanglesToCoverPoints</span><span class="params">(points [][]<span class="type">int</span>, w <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    sort.Slice(points,<span class="function"><span class="keyword">func</span><span class="params">(i,j <span class="type">int</span>)</span></span><span class="type">bool</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> points[i][<span class="number">0</span>]&lt;points[j][<span class="number">0</span>]</span><br><span class="line">    &#125;)</span><br><span class="line">    n,cur,ans := <span class="built_in">len</span>(points),<span class="number">-1</span>,<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i :=<span class="number">0</span>;i&lt;n;i++&#123;</span><br><span class="line">        <span class="keyword">if</span> cur &lt; points[i][<span class="number">0</span>]&#123;</span><br><span class="line">            ans++</span><br><span class="line">            cur = points[i][<span class="number">0</span>]+w</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;3111.覆盖所有点的最少矩形数目&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="每日一题" scheme="https://perseisqaq.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日一题2024-07-30</title>
