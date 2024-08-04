@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>力扣每日一题2024-08-04</title>
+    <url>/2024/08/04/23/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>572.另一棵树的子树</p>
+<span id="more"></span>
+
+<p><a href="https://leetcode.cn/problems/subtree-of-another-tree/description/?envType=daily-question&amp;envId=2024-08-04">https://leetcode.cn/problems/subtree-of-another-tree/description/?envType=daily-question&amp;envId=2024-08-04</a></p>
+<p>给你两棵二叉树<code>root</code>和<code>subRoot</code>。检验<code>root</code>中是否包含和<code>subRoot</code>具有相同结构和节点值的子树。如果存在，返回<code>true</code>；否则，返回<code>false</code>。</p>
+<p>二叉树<code>tree</code>的一棵子树包括<code>tree</code>的某个节点和这个节点的所有后代节点。<code>tree</code>也可以看做它自身的一棵子树。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>判断两个子树相等：他们的值，左子树与右子树都相等，递归判断即可。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * type TreeNode struct &#123;</span></span><br><span class="line"><span class="comment"> *     Val int</span></span><br><span class="line"><span class="comment"> *     Left *TreeNode</span></span><br><span class="line"><span class="comment"> *     Right *TreeNode</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">is_same</span><span class="params">(a,b *TreeNode)</span></span><span class="type">bool</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> a == <span class="literal">nil</span> || b == <span class="literal">nil</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a==b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a.Val == b.Val &amp;&amp; is_same(a.Left,b.Left) &amp;&amp; is_same(a.Right,b.Right)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isSubtree</span><span class="params">(root *TreeNode, subRoot *TreeNode)</span></span> <span class="type">bool</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> root == <span class="literal">nil</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> is_same(root,subRoot)||isSubtree(root.Left,subRoot)||isSubtree(root.Right,subRoot)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>每日一题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣每日一题2024-08-03</title>
     <url>/2024/08/03/13/</url>
     <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>3143.正方形中的最多点数</p>
