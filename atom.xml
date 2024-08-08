@@ -6,7 +6,7 @@
   <link href="https://perseisqaq.github.io/atom.xml" rel="self"/>
   
   <link href="https://perseisqaq.github.io/"/>
-  <updated>2024-08-04T13:50:23.000Z</updated>
+  <updated>2024-08-08T03:35:29.000Z</updated>
   <id>https://perseisqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣每日一题2024-08-08</title>
+    <link href="https://perseisqaq.github.io/2024/08/08/29/"/>
+    <id>https://perseisqaq.github.io/2024/08/08/29/</id>
+    <published>2024-08-08T03:35:29.000Z</published>
+    <updated>2024-08-08T03:35:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>3131.找出与数组相加的整数 I</p><span id="more"></span><p><a href="https://leetcode.cn/problems/find-the-integer-added-to-array-i/description/?envType=daily-question&amp;envId=2024-08-08">https://leetcode.cn/problems/find-the-integer-added-to-array-i/description/?envType=daily-question&amp;envId=2024-08-08</a></p><p>给你两个长度相等的数组<code>nums1</code>和<code>nums2</code>。</p><p>数组<code>nums1</code>中的每个元素都与变量<code>x</code>所表示的整数相加。如果<code>x</code>为负数，则表现为元素值的减少。</p><p>在与<code>x</code>相加后，<code>nums1</code>和<code>nums2</code><strong>相等</strong>。当两个数组中包含相同的整数，并且这些整数出现的频次相同时，两个数组 <strong>相等</strong>。</p><p>返回整数<code>x</code>。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>同一数组内每个数与相同的数相加，他们的相对大小不会改变。那么两个数组之间的大小对应关系不会改变-&gt;已知x必定存在，找出两个数组中最小的数并做差即可。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">addedInteger</span><span class="params">(nums1 []<span class="type">int</span>, nums2 []<span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    min1,min2 := <span class="number">1010</span>,<span class="number">1010</span></span><br><span class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="built_in">len</span>(nums1);i++&#123;</span><br><span class="line">        min1 = min(min1,nums1[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> i:=<span class="number">0</span>;i&lt;<span class="built_in">len</span>(nums2);i++&#123;</span><br><span class="line">        min2 = min(min2,nums2[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> min2-min1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;3131.找出与数组相加的整数 I&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="每日一题" scheme="https://perseisqaq.github.io/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日一题2024-08-04</title>
