@@ -1238,7 +1238,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #40ff63;
+    background: #3eee06;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2807,6 +2807,19 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+body {
+  background: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+body .main-inner {
+  background-color: rgba(255,255,255,0.5);
+}
+.main-inner {
+  background-color: rgba(255,255,255,0.5);
 }
 @media (min-width: 992px) and (max-width: 991px) {
   .sidebar {
